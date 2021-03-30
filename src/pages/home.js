@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import slugify from 'react-slugify';
 import { Row, Col, Card, Pagination } from 'antd';
 import LayoutComponent from '../component/layout';
 import { getDataMovies, getDataNewFilm } from '../services/api';
