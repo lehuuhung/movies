@@ -52,7 +52,7 @@ const HomePage = () => {
         <LayoutComponent>
             <ListMovieComponent ListMoviesPages={movies} />
           
-            <Row style={{ textAlign: 'center' }}>
+            {/* <Row style={{ textAlign: 'center' }}>
                 <Col span={24}>
                     <Pagination
                         current={page}
@@ -61,7 +61,7 @@ const HomePage = () => {
                         onChange={(pages) => changePage(pages)}
                     />
                 </Col>
-            </Row>
+            </Row> */}
         </LayoutComponent>
     )
 }

@@ -50,7 +50,7 @@ const NewFilmPage = () => {
     return (
         <LayoutComponent>
            <ListMovieComponent ListMoviesPages={movies}/>
-            <Row style={{ textAlign: 'center' }}>
+            {/* <Row style={{ textAlign: 'center' }}>
                 <Col span={24}>
                     <Pagination
                         current={page}
@@ -59,7 +59,7 @@ const NewFilmPage = () => {
                         onChange={(pages) => changePage(pages)}
                     />
                 </Col>
-            </Row>
+            </Row> */}
         </LayoutComponent>
     )
 }
