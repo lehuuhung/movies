@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Row, Col, Input, Card, Pagination } from 'antd';
+import { Row, Col, Input, Pagination } from 'antd';
 import LayoutComponent from '../component/layout';
 import { searchMovieByKeywords } from '../services/api';
 import LoadingData from '../component/loading-data';
@@ -16,8 +16,8 @@ const SearchFilmPage = () => {
         const val = event.target.value;
         setKeyWord(val);
     }
-    const searchMovies = async (keywords , currentPage = 1) => {
-     
+    const searchMovies = async (keywords, currentPage = 1) => {
+
         if (keywords.length > 0) {
             setLoadingSearch(true);
             const data = await searchMovieByKeywords(keywords, currentPage);
@@ -57,7 +57,7 @@ const SearchFilmPage = () => {
                                 current={pages}
                                 pageSize={20}
                                 total={totalItem}
-                                onChange={(pages) => searchMovies(keyword,pages)}
+                                onChange={(pages) => searchMovies(keyword, pages)}
                             />
                         </Col>
                     </Row> : null}

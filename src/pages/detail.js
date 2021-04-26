@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { Row, Col, Card } from 'antd';
+import { Row, Col } from 'antd';
 import { useParams } from "react-router-dom";
 import LayoutComponent from '../component/layout';
 import { getDataMoviesById } from '../services/api';
 import LoadingData from '../component/loading-data';
 
 
-const { Meta } = Card;
+// const { Meta } = Card;
 const DetailMoviesPage = () => {
     // lấy đc param từ url xuống và truyền đúng tên đặt ở url bên kia
     const { id } = useParams();
@@ -57,13 +57,13 @@ const DetailMoviesPage = () => {
                 </Col>
                 <Col span={12}>
                     <h1>{detailMovies.title}</h1>
-                    {detailMovies.overview ? (<p>Mô tả: {detailMovies.overview}</p>) : null }
-                    
+                    {detailMovies.overview ? (<p>Mô tả: {detailMovies.overview}</p>) : null}
+
                     <p>Ngày sản xuất:{detailMovies.release_date}</p>
                     <p>Lượt xem:{detailMovies.vote_count}</p>
                     <p>Điểm:{detailMovies.vote_average}</p>
                 </Col>
-                <Col span={6} style={{height:'500px',  overflowY: 'scroll' }}>
+                <Col span={6} style={{ height: '500px', overflowY: 'scroll' }}>
                     <Row>
                         {detailMovies.images !== undefined ? detailMovies.images.backdrops.map((item, index) => (
                             <Col span={24} key={index}>

@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { Row, Col, Card, Pagination } from 'antd';
+import { Row, Col, Pagination } from 'antd';
 import LayoutComponent from '../component/layout';
-import { getDataMovies, getDataNewFilm } from '../services/api';
+import { getDataNewFilm } from '../services/api';
 import LoadingData from '../component/loading-data';
 import ListMovieComponent from '../component/list-movie';
-const { Meta } = Card;
+// const { Meta } = Card;
 const NewFilmPage = () => {
     const [loadingHome, setLoadingHome] = useState(false);
     const [movies, setMovies] = useState([]);
@@ -49,8 +49,8 @@ const NewFilmPage = () => {
 
     return (
         <LayoutComponent>
-           <ListMovieComponent ListMoviesPages={movies}/>
-            {/* <Row style={{ textAlign: 'center' }}>
+            <ListMovieComponent ListMoviesPages={movies} />
+            <Row style={{ textAlign: 'center' }}>
                 <Col span={24}>
                     <Pagination
                         current={page}
@@ -59,7 +59,7 @@ const NewFilmPage = () => {
                         onChange={(pages) => changePage(pages)}
                     />
                 </Col>
-            </Row> */}
+            </Row>
         </LayoutComponent>
     )
 }

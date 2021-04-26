@@ -4,7 +4,7 @@ import { Skeleton } from 'antd';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,Redirect
+  Route,
 } from "react-router-dom";
 import 'antd/dist/antd.css';
 const HomePage = lazy(() => import('./pages/home'));
@@ -38,7 +38,7 @@ const App = () => {
           <Route path="/movie/:slug~:id">
             <DetailMoviesPageComponent />
           </Route>
-          
+
           <Route extract path="/">
             <HomePage />
           </Route>

@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { Row, Col, Card, Pagination } from 'antd';
+import { Row, Col, Pagination } from 'antd';
 import LayoutComponent from '../component/layout';
-import { getDataMovies, getDataNewFilm } from '../services/api';
+import { getDataMovies } from '../services/api';
 import LoadingData from '../component/loading-data';
 import ListMovieComponent from '../component/list-movie';
 
-const { Meta } = Card;
+// const { Meta } = Card;
 const HomePage = () => {
     const [loadingHome, setLoadingHome] = useState(false);
     const [movies, setMovies] = useState([]);
@@ -51,8 +51,8 @@ const HomePage = () => {
     return (
         <LayoutComponent>
             <ListMovieComponent ListMoviesPages={movies} />
-          
-            {/* <Row style={{ textAlign: 'center' }}>
+
+            <Row style={{ textAlign: 'center' }}>
                 <Col span={24}>
                     <Pagination
                         current={page}
@@ -61,7 +61,7 @@ const HomePage = () => {
                         onChange={(pages) => changePage(pages)}
                     />
                 </Col>
-            </Row> */}
+            </Row>
         </LayoutComponent>
     )
 }
